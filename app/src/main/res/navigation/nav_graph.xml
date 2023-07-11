@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/waitingMainFragment">
+
+    <fragment android:id="@+id/waitingMainFragment" android:name="dsk.altlombard.test.fragments.WaitingMainFragment"
+              android:label="fragment_waiting_main" tools:layout="@layout/fragment_waiting_main">
+        <action android:id="@+id/action_waitingMainFragment_to_authorizationEnteringFragment"
+                app:destination="@id/authorizationEnteringFragment"/>
+        <action android:id="@+id/action_waitingMainFragment_to_codeEnteringFragment"
+                app:destination="@id/codeEnteringFragment"/>
+    </fragment>
+    <fragment android:id="@+id/authorizationEnteringFragment"
+              android:name="dsk.altlombard.test.fragments.entering.AuthorizationEnteringFragment"
+              android:label="fragment_authorization_entering" tools:layout="@layout/fragment_authorization_entering">
+        <action android:id="@+id/action_authorizationEnteringFragment_to_contractEnteringFragment"
+                app:destination="@id/contractEnteringFragment"/>
+    </fragment>
+    <fragment android:id="@+id/codeEnteringFragment"
+              android:name="dsk.altlombard.test.fragments.entering.CodeEnteringFragment"
+              android:label="fragment_code_entering" tools:layout="@layout/fragment_code_entering">
+        <action android:id="@+id/action_codeEnteringFragment_to_authorizationEnteringFragment"
+                app:destination="@id/authorizationEnteringFragment"/>
+        <action android:id="@+id/action_codeEnteringFragment_to_workingMainFragment"
+                app:destination="@id/workingMainFragment"/>
+    </fragment>
+    <fragment android:id="@+id/contractEnteringFragment"
+              android:name="dsk.altlombard.test.fragments.entering.ContractEnteringFragment"
+              android:label="fragment_contract_entering" tools:layout="@layout/fragment_contract_entering">
+        <action android:id="@+id/action_contractEnteringFragment_to_smsCodeEnteringFragment"
+                app:destination="@id/smsCodeEnteringFragment"/>
+        <action android:id="@+id/action_contractEnteringFragment_to_authorizationEnteringFragment"
+                app:destination="@id/authorizationEnteringFragment"/>
+    </fragment>
+    <fragment android:id="@+id/smsCodeEnteringFragment"
+              android:name="dsk.altlombard.test.fragments.entering.SmsCodeEnteringFragment"
+              android:label="fragment_sms_code_entering" tools:layout="@layout/fragment_sms_code_entering">
+        <action android:id="@+id/action_smsCodeEnteringFragment_to_codeEnteringFragment"
+                app:destination="@id/codeEnteringFragment"/>
+        <action android:id="@+id/action_smsCodeEnteringFragment_to_contractEnteringFragment"
+                app:destination="@id/contractEnteringFragment"/>
+    </fragment>
+    <fragment android:id="@+id/workingMainFragment" android:name="dsk.altlombard.test.fragments.WorkingMainFragment"
+              android:label="fragment_working_main" tools:layout="@layout/fragment_working_main">
+        <action android:id="@+id/action_workingMainFragment_to_pledgeWorkingOneTicketActiveFragment"
+                app:destination="@id/pledgeWorkingOneTicketActiveFragment"/>
+        <action android:id="@+id/action_workingMainFragment_to_pledgeWorkingOneTicketArchiveFragment"
+                app:destination="@id/pledgeWorkingOneTicketArchiveFragment"/>
+        <action android:id="@+id/action_workingMainFragment_to_noticeWorkingAddressFragment"
+                app:destination="@id/noticeWorkingAddressFragment"/>
+        <action android:id="@+id/action_workingMainFragment_to_noticeWorkingAboutFragment"
+                app:destination="@id/noticeWorkingAboutFragment"/>
+    </fragment>
+    <fragment android:id="@+id/pledgeWorkingOneTicketActiveFragment"
+              android:name="dsk.altlombard.test.fragments.working.PledgeWorkingOneTicketActiveFragment"
+              android:label="fragment_pledge_working_active_one"
+              tools:layout="@layout/fragment_pledge_working_active_one">
+        <action android:id="@+id/action_pledgeWorkingOneTicketActiveFragment_to_pledgeWorkingOneTicketActiveOperationsFragment"
+                app:destination="@id/pledgeWorkingOneTicketActiveOperationsFragment"/>
+        <action android:id="@+id/action_pledgeWorkingOneTicketActiveFragment_to_pledgeWorkingOneTicketActiveLoanOperationsFragment"
+                app:destination="@id/pledgeWorkingOneTicketActiveLoanOperationsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/pledgeWorkingOneTicketArchiveFragment"
+              android:name="dsk.altlombard.test.fragments.working.PledgeWorkingOneTicketArchiveFragment"
+              android:label="fragment_pledge_working_archive_one"
+              tools:layout="@layout/fragment_pledge_working_archive_one">
+        <action android:id="@+id/action_pledgeWorkingOneTicketArchiveFragment_to_pledgeWorkingOneTicketActiveOperationsFragment"
+                app:destination="@id/pledgeWorkingOneTicketActiveOperationsFragment"/>
+        <action android:id="@+id/action_pledgeWorkingOneTicketArchiveFragment_to_pledgeWorkingOneTicketActiveLoanOperationsFragment"
+                app:destination="@id/pledgeWorkingOneTicketActiveLoanOperationsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/pledgeWorkingOneTicketActiveLoanOperationsFragment"
+              android:name="dsk.altlombard.test.fragments.working.PledgeWorkingOneTicketActiveLoanOperationsFragment"
+              android:label="fragment_pledge_working_active_one_loan_operations"
+              tools:layout="@layout/fragment_pledge_working_active_one_loan_operations"/>
+    <fragment android:id="@+id/pledgeWorkingOneTicketActiveOperationsFragment"
+              android:name="dsk.altlombard.test.fragments.working.PledgeWorkingOneTicketActiveOperationsFragment"
+              android:label="fragment_pledge_working_active_one_operations"
+              tools:layout="@layout/fragment_pledge_working_active_one_operations"/>
+    <fragment android:id="@+id/noticeWorkingAddressFragment"
+              android:name="dsk.altlombard.test.fragments.working.AnotherWorkingAddressFragment"
+              android:label="fragment_notice_working_address" tools:layout="@layout/fragment_another_working_address"/>
+    <fragment android:id="@+id/noticeWorkingAboutFragment"
+              android:name="dsk.altlombard.test.fragments.working.AnotherWorkingAboutFragment"
+              android:label="fragment_notice_working_about" tools:layout="@layout/fragment_another_working_about"/>
+</navigation>

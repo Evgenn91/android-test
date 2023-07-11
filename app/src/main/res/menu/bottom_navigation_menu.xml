@@ -1,0 +1,24 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/main_item"
+            android:enabled="true"
+            android:icon="@drawable/icon_main"
+            android:title="Главная"/>
+    <item
+            android:id="@+id/pledge_item"
+            android:enabled="true"
+            android:icon="@drawable/icon_pledge"
+            android:title="Залоги"/>
+    <item
+            android:id="@+id/notice_item"
+            android:enabled="true"
+            android:icon="@drawable/icon_notice"
+            android:title="Уведомления"/>
+    <item
+            android:id="@+id/another_item"
+            android:enabled="true"
+            android:icon="@drawable/icon_another"
+            android:title="Еще"/>
+
+</menu>

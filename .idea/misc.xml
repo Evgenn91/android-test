@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/icon_main.xml" value="0.3359375" />
+        <entry key="app/src/main/res/drawable/logo.xml" value="0.5463541666666667" />
+        <entry key="app/src/main/res/drawable/main_background.xml" value="0.4703125" />
+        <entry key="app/src/main/res/drawable/myrect.xml" value="0.33489583333333334" />
+        <entry key="app/src/main/res/drawable/orange_layout.xml" value="0.3203125" />
+        <entry key="app/src/main/res/drawable/rectangl.xml" value="0.32135416666666666" />
+        <entry key="app/src/main/res/drawable/square.xml" value="0.33489583333333334" />
+        <entry key="app/src/main/res/drawable/tttt.xml" value="0.46927083333333336" />
+        <entry key="app/src/main/res/font/roboto_light.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/activity_work.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/content_work.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_another_working.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_another_working_about.xml" value="0.453125" />
+        <entry key="app/src/main/res/layout/fragment_another_working_address.xml" value="0.24322916666666666" />
+        <entry key="app/src/main/res/layout/fragment_another_working_address_listview.xml" value="0.45208333333333334" />
+        <entry key="app/src/main/res/layout/fragment_authorization_entering.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_code_entering.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_contract_entering.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_main_working.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_main_working_listview.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_notice_working.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_notice_working_about.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/layout/fragment_notice_working_address.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/layout/fragment_notice_working_listview.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working_active.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working_active_one.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working_active_one_loan_operations.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working_active_one_operations.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working_archive.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working_archive_one.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working_listview.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working_one.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/layout/fragment_pledge_working_one_listview.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/fragment_sms_code_entering.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_waiting_main.xml" value="0.5055555555555555" />
+        <entry key="app/src/main/res/layout/fragment_working_main.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/splash.xml" value="0.5055555555555555" />
+        <entry key="app/src/main/res/layout/аfragment_pledge_working_one_listview.xml" value="0.30416666666666664" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.334375" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.334375" />
+        <entry key="app/src/main/res/menu/top_navigation_menu.xml" value="0.31979166666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android API 33 Platform" project-jdk-type="Android SDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

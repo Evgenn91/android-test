@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".fragments.entering.SmsCodeEnteringFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+        <TextView
+                android:text="Код"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smscode_title"
+                android:layout_marginBottom="10dp"
+                android:textSize="32sp"/>
+        <TextView
+                android:text="Введите код из СМС"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smscode_subtitle"
+                android:textSize="20sp"/>
+
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:id="@+id/enter_smscode"/>
+
+
+        <Button
+                android:text="Продолжить"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/button_smscode_entering"
+                android:textAllCaps="false"
+                app:cornerRadius="15dp"/>
+
+        <TextView
+                android:text="Код отправлен на номер телефона"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smscode_repead_text"
+                android:textSize="12sp"
+                android:gravity="center"/>
+        <TextView
+                android:text="Запросить новый код можно через 0 сек."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smscode_repead_text_timer"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/layout_for_button_delete">
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
