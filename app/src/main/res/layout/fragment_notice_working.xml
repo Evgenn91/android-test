@@ -9,27 +9,49 @@
         android:clipChildren="false">
 
     <LinearLayout
-            android:id="@+id/layout_working1"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:clipChildren="false">
 
-        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:tools="http://schemas.android.com/tools"
-                  android:id="@+id/notice_list"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  tools:ignore="MissingConstraints"
-                  android:layout_marginTop="10dp"
-                  android:dividerHeight="15.0sp"
-                  android:divider="@android:color/transparent"
-                  android:scrollbars="none">
-        </ListView>
+        <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+            <com.google.android.material.appbar.MaterialToolbar
+                    android:background="@android:color/white"
+                    android:id="@+id/topAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:title="Уведомления"
+            />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+                android:id="@+id/layout_working1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:clipChildren="false">
+
+            <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:id="@+id/notice_list"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      tools:ignore="MissingConstraints"
+                      android:layout_marginTop="10dp"
+                      android:dividerHeight="15.0sp"
+                      android:divider="@android:color/transparent"
+                      android:scrollbars="none">
+            </ListView>
+        </LinearLayout>
 
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

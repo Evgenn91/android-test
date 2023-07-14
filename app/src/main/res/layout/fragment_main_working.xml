@@ -137,8 +137,7 @@
                   android:layout_marginTop="10dp"
                   android:dividerHeight="15.0sp"
                   android:divider="@android:color/transparent"
-                  android:scrollbars="none">
-        </ListView>
+                  android:scrollbars="none"/>
 
     </LinearLayout>
 

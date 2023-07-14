@@ -28,5 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //с этой настройкой стрелка назад на toolbare становится работостпособной
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
 
 }
