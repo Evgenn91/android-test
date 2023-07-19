@@ -9,163 +9,184 @@
         android:clipChildren="false">
 
     <LinearLayout
-            android:id="@+id/layout_working1"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:clipChildren="false">
 
-        <LinearLayout
-                android:orientation="vertical"
+        <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@drawable/rectangl"
-                android:elevation="12dp"
-                android:layout_margin="10dp"
-                android:gravity="center">
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                    android:background="@android:color/white"
+                    android:id="@+id/topAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:title="Залоговый билет"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+                android:id="@+id/layout_working1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:clipChildren="false">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rectangl"
+                    android:elevation="12dp"
+                    android:layout_margin="10dp"
+                    android:gravity="center">
+
+                <TextView
+                        android:text="Сумма погашений"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pincode_subtitle1"
+                        app:fontFamily="@font/roboto_light"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"/>
+
+                <TextView
+                        android:text="3 396,60 ₽"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pincode_subtitle2"
+                        android:textSize="32sp"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"/>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                        <TextView
+                                android:text="Погашено займа"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pincode_subtitle13"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                app:fontFamily="@font/roboto_light"
+                                android:layout_marginTop="5dp"/>
+
+                        <TextView
+                                android:text="1004,60 ₽"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pincode_subtitle14"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                        <TextView
+                                android:text="Погашено процентов"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pincode_subtitle3"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                app:fontFamily="@font/roboto_light"
+                                android:layout_marginTop="5dp"/>
+
+                        <TextView
+                                android:text="2 392,00 ₽"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pincode_subtitle4"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
-                    android:text="Сумма погашений"
+                    android:text="Все операции"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/pincode_subtitle1"
-                    app:fontFamily="@font/roboto_light"
-                    android:textSize="16sp"
+                    android:id="@+id/pincode_subtitle71"
+                    android:textSize="24sp"
                     android:gravity="center"
-                    android:textColor="@android:color/black"/>
-
-            <TextView
-                    android:text="3 396,60 ₽"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/pincode_subtitle2"
-                    android:textSize="32sp"
-                    android:gravity="center"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="30dp"/>
 
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                <LinearLayout
-                        android:orientation="vertical"
+                    android:layout_height="45dp"
+                    android:background="@drawable/orange_layout"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:radius="20dp">
+
+                <TextView
+                        android:text="Дата"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1">
-                    <TextView
-                            android:text="Погашено займа"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/pincode_subtitle13"
-                            android:textSize="12sp"
-                            android:gravity="center"
-                            android:textColor="@android:color/black"
-                            app:fontFamily="@font/roboto_light"
-                            android:layout_marginTop="5dp"/>
+                        android:layout_weight="1"
+                        android:id="@+id/pincode_subtitle41"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"/>
 
-                    <TextView
-                            android:text="1004,60 ₽"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/pincode_subtitle14"
-                            android:textSize="15sp"
-                            android:gravity="center"
-                            android:textColor="@android:color/black"/>
-                </LinearLayout>
-
-                <LinearLayout
-                        android:orientation="vertical"
+                <TextView
+                        android:text="Проценты"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1">
-                    <TextView
-                            android:text="Погашено процентов"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/pincode_subtitle3"
-                            android:textSize="12sp"
-                            android:gravity="center"
-                            android:textColor="@android:color/black"
-                            app:fontFamily="@font/roboto_light"
-                            android:layout_marginTop="5dp"/>
+                        android:layout_weight="1"
+                        android:id="@+id/pincode_subtitle42"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"/>
 
-                    <TextView
-                            android:text="2 392,00 ₽"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/pincode_subtitle4"
-                            android:textSize="15sp"
-                            android:gravity="center"
-                            android:textColor="@android:color/black"/>
-
-                </LinearLayout>
+                <TextView
+                        android:text="Займ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/pincode_subtitle43"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"/>
             </LinearLayout>
+
+            <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:id="@+id/pledge_active_operations"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      tools:ignore="MissingConstraints"
+                      android:layout_margin="10dp"
+                      android:dividerHeight="10.0sp"
+                      android:divider="@android:color/transparent"
+                      android:scrollbars="none">
+            </ListView>
+
         </LinearLayout>
-
-        <TextView
-                android:text="Все операции"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/pincode_subtitle71"
-                android:textSize="24sp"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:layout_marginTop="30dp"/>
-
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/orange_layout"
-                android:layout_margin="10dp"
-                android:gravity="center"
-                android:radius="20dp">
-
-            <TextView
-                    android:text="Дата"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/pincode_subtitle41"
-                    android:textSize="15sp"
-                    android:gravity="center"
-                    android:textColor="@android:color/white"/>
-
-            <TextView
-                    android:text="Проценты"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/pincode_subtitle42"
-                    android:textSize="15sp"
-                    android:gravity="center"
-                    android:textColor="@android:color/white"/>
-
-            <TextView
-                    android:text="Займ"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/pincode_subtitle43"
-                    android:textSize="15sp"
-                    android:gravity="center"
-                    android:textColor="@android:color/white"/>
-        </LinearLayout>
-
-        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:tools="http://schemas.android.com/tools"
-                  android:id="@+id/pledge_active_operations"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  tools:ignore="MissingConstraints"
-                  android:layout_margin="10dp"
-                  android:dividerHeight="10.0sp"
-                  android:divider="@android:color/transparent"
-                  android:scrollbars="none">
-        </ListView>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

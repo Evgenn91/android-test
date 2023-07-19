@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import dsk.altlombard.test.R;
 import dsk.altlombard.test.adapter.PledgeActiveOneRowAdapter;
@@ -28,6 +30,12 @@ public class PledgeWorkingOneTicketActiveLoanOperationsFragment extends Fragment
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        //изображение кнопки назад в верхнем тулбаре
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.topAppBar);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         //TODO реализация получения списка залогов
         List<PledgeRow> pledges = new ArrayList<>();

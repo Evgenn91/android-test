@@ -14,19 +14,19 @@
             android:layout_height="match_parent"
             android:clipChildren="false">
 
-    <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-                android:background="@android:color/white"
-                android:id="@+id/topAppBar"
+        <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:title="О приложении"
-        />
+                android:layout_height="wrap_content">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <com.google.android.material.appbar.MaterialToolbar
+                    android:background="@android:color/white"
+                    android:id="@+id/topAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:title="О приложении"
+            />
+
+        </com.google.android.material.appbar.AppBarLayout>
 
         <LinearLayout
                 android:layout_width="match_parent"

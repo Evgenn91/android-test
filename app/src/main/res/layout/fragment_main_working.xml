@@ -9,137 +9,159 @@
         android:clipChildren="false">
 
     <LinearLayout
-            android:id="@+id/layout_working1"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:clipChildren="false">
 
+        <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                    android:background="@android:color/white"
+                    android:id="@+id/topAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:title="Login"
+            />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
         <LinearLayout
+                android:id="@+id/layout_working1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="@drawable/rectangl"
-                android:elevation="12dp"
-                android:layout_margin="10dp"
-                android:gravity="center">
-
-            <TextView
-                    android:text="Общий долг процентов"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/pincode_subtitle1"
-                    app:fontFamily="@font/roboto_light"
-                    android:textSize="16sp"
-                    android:gravity="center"
-                    android:textColor="@android:color/black"/>
-
-            <TextView
-                    android:text="2643,37 р"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/pincode_subtitle2"
-                    android:textSize="32sp"
-                    android:gravity="center"
-                    android:textColor="@android:color/black"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:clipChildren="false">
 
             <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="0dip"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
                     android:background="@drawable/rectangl"
                     android:elevation="12dp"
                     android:layout_margin="10dp"
                     android:gravity="center">
 
                 <TextView
-                        android:text="Общий остаток по займу"
+                        android:text="Общий долг процентов"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/pincode_subtitle3"
-                        android:textSize="12sp"
+                        android:id="@+id/pincode_subtitle1"
+                        app:fontFamily="@font/roboto_light"
+                        android:textSize="16sp"
                         android:gravity="center"
-                        android:textColor="@android:color/black"
-                        app:fontFamily="@font/roboto_light"/>
+                        android:textColor="@android:color/black"/>
 
                 <TextView
-                        android:text="11000 р"
+                        android:text="2643,37 р"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/pincode_subtitle4"
-                        android:textSize="20sp"
+                        android:id="@+id/pincode_subtitle2"
+                        android:textSize="32sp"
                         android:gravity="center"
                         android:textColor="@android:color/black"/>
 
             </LinearLayout>
 
             <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dip"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/rectangl"
-                    android:elevation="12dp"
-                    android:layout_margin="10dp"
-                    android:gravity="center">
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
 
-                <TextView
-                        android:text="Общий остаток по займу"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pincode_subtitle5"
-                        android:textSize="12sp"
-                        android:gravity="center"
-                        android:textColor="@android:color/black"
-                        app:fontFamily="@font/roboto_light"/>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dip"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangl"
+                        android:elevation="12dp"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
 
-                <TextView
-                        android:text="14000 р"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pincode_subtitle6"
-                        android:textSize="20sp"
-                        android:gravity="center"
-                        android:textColor="@android:color/black"/>
+                    <TextView
+                            android:text="Общий остаток по займу"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pincode_subtitle3"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            app:fontFamily="@font/roboto_light"/>
+
+                    <TextView
+                            android:text="11000 р"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pincode_subtitle4"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dip"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangl"
+                        android:elevation="12dp"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="Общий остаток по займу"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pincode_subtitle5"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            app:fontFamily="@font/roboto_light"/>
+
+                    <TextView
+                            android:text="14000 р"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pincode_subtitle6"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
+            <TextView
+                    android:text="Активные залоги"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/authorization_subtitle_main"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    app:fontFamily="@font/roboto"/>
+
+            <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:id="@+id/main_active_pledge_list"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      tools:ignore="MissingConstraints"
+                      android:layout_marginTop="10dp"
+                      android:dividerHeight="15.0sp"
+                      android:divider="@android:color/transparent"
+                      android:scrollbars="none"/>
+
         </LinearLayout>
 
-        <TextView
-                android:text="Активные залоги"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/authorization_subtitle_main"
-                android:textSize="15sp"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                app:fontFamily="@font/roboto"/>
-
-        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:tools="http://schemas.android.com/tools"
-                  android:id="@+id/main_active_pledge_list"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  tools:ignore="MissingConstraints"
-                  android:layout_marginTop="10dp"
-                  android:dividerHeight="15.0sp"
-                  android:divider="@android:color/transparent"
-                  android:scrollbars="none"/>
 
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
