@@ -22,6 +22,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/authorization_title_main"
                 android:textSize="34sp"
+                android:letterSpacing="0.03"
                 android:textColor="@android:color/black"
                 app:fontFamily="@font/roboto"/>
         <TextView
@@ -30,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/authorization_subtitle_main"
                 android:textSize="16sp"
+                android:letterSpacing="0.02"
                 android:textColor="@android:color/black"
                 app:fontFamily="@font/roboto"/>
         <Button
@@ -42,6 +44,7 @@
                 android:textAllCaps="false"
                 app:cornerRadius="15dp"
                 android:textSize="16sp"
+                android:letterSpacing="0.02"
                 app:fontFamily="@font/roboto"/>
 
 
@@ -53,6 +56,7 @@
                 android:textAllCaps="false"
                 app:cornerRadius="15dp"
                 android:textSize="16sp"
+                android:letterSpacing="0.02"
                 android:backgroundTint="#D9DADA"
                 android:textColor="@android:color/black"
                 app:fontFamily="@font/roboto"/>
@@ -64,6 +68,7 @@
                 android:textAllCaps="false"
                 app:cornerRadius="15dp"
                 android:textSize="16sp"
+                android:letterSpacing="0.02"
                 android:backgroundTint="#D9DADA"
                 android:textColor="@android:color/black"
                 app:fontFamily="@font/roboto"/>
