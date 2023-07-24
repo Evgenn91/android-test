@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.navigation.fragment.NavHostFragment;
+import com.google.android.material.textfield.TextInputLayout;
 import dsk.altlombard.test.R;
 import dsk.altlombard.test.databinding.FragmentSmsCodeEnteringBinding;
 import dsk.altlombard.test.databinding.FragmentWaitingMainBinding;
@@ -34,7 +35,7 @@ public class SmsCodeEnteringFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ViewGroup viewGroup = view.findViewById(R.id.layout_for_button_delete);//сюда мы встявляем кнопку "повторное отправление кода"
-        EditText enteredSmsCode = view.findViewById(R.id.enter_smscode);
+        TextInputLayout enteredSmsCode = view.findViewById(R.id.enter_smscode);
         TextView textWithCounter = view.findViewById(R.id.smscode_repead_text_timer);
 
         SharedPreferences registrationEntity = this.getActivity().getSharedPreferences("registration", Context.MODE_PRIVATE);
@@ -48,7 +49,7 @@ public class SmsCodeEnteringFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String savedSmsCode = registrationEntity.getString("smsCode","");
-                if(!savedSmsCode.equals("") && savedSmsCode.equals(enteredSmsCode.getText().toString())){
+                if(!savedSmsCode.equals("") && savedSmsCode.equals(enteredSmsCode.getEditText().getText().toString())){
                     myEdit.remove("smsCode");
                     myEdit.remove("contractNumber");
 
@@ -67,7 +68,7 @@ public class SmsCodeEnteringFragment extends Fragment {
     private void startCounterDown(TextView textWithCounter, ViewGroup viewGroup, SharedPreferences registrationEntity){
         SharedPreferences.Editor myEdit = registrationEntity.edit();
 
-        new CountDownTimer(15000, 1000) {
+        new CountDownTimer(5000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 String sec = "Запросить новый код можно через " + millisUntilFinished / 1000 + " сек.";
@@ -76,12 +77,13 @@ public class SmsCodeEnteringFragment extends Fragment {
 
             public void onFinish() {
                 if(getActivity() != null){
-                    Button deleteButton = new Button(getActivity());
+                    //создание кнопки
+                    TextView deleteButton = new TextView(getActivity());
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-                    params.topMargin = 70;
+                    params.topMargin = 20;
                     deleteButton.setLayoutParams(params);
                     deleteButton.setText("Отправить");
-                    deleteButton.setBackgroundColor(Color.RED);
+                    deleteButton.setTextColor(Color.RED);
                     deleteButton.setPadding(20,20,20,20);
                     viewGroup.addView(deleteButton);
                     deleteButton.setOnClickListener(new View.OnClickListener() {

@@ -15,62 +15,81 @@
             android:layout_marginLeft="57dp"
             android:layout_marginRight="57dp">
 
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:layout_marginBottom="40dp">
 
-        <TextView
-                android:text="Авторизация"
+            <TextView
+                    android:text="Авторизация"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/authorization_title_main"
+                    android:textSize="34sp"
+                    android:letterSpacing="0.03"
+                    android:textColor="@android:color/black"
+                    app:fontFamily="@font/roboto"/>
+            <TextView
+                    android:text="Выберите способ для входа"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/authorization_subtitle_main"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.02"
+                    android:textColor="@android:color/black"
+                    app:fontFamily="@font/roboto"/>
+
+        </LinearLayout>
+
+        <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/authorization_title_main"
-                android:textSize="34sp"
-                android:letterSpacing="0.03"
-                android:textColor="@android:color/black"
-                app:fontFamily="@font/roboto"/>
-        <TextView
-                android:text="Выберите способ для входа"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/authorization_subtitle_main"
-                android:textSize="16sp"
-                android:letterSpacing="0.02"
-                android:textColor="@android:color/black"
-                app:fontFamily="@font/roboto"/>
-        <Button
-                android:text="По номеру договора"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/button_select_contract_entering"
-                android:layout_marginTop="55dp"
-                android:layout_marginBottom="30dp"
-                android:textAllCaps="false"
-                app:cornerRadius="15dp"
-                android:textSize="16sp"
-                android:letterSpacing="0.02"
-                app:fontFamily="@font/roboto"/>
+                android:layout_height="1dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:clipChildren="false">
+
+            <Button
+                    android:text="По номеру договора"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/button_select_contract_entering"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="15dp"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.02"
+                    app:fontFamily="@font/roboto"/>
 
 
-        <Button
-                android:text="Логин и пароль"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/button_select_login_password_entering"
-                android:textAllCaps="false"
-                app:cornerRadius="15dp"
-                android:textSize="16sp"
-                android:letterSpacing="0.02"
-                android:backgroundTint="#D9DADA"
-                android:textColor="@android:color/black"
-                app:fontFamily="@font/roboto"/>
-        <Button
-                android:text="QR-код"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/button_select_qrcode_entering"
-                android:textAllCaps="false"
-                app:cornerRadius="15dp"
-                android:textSize="16sp"
-                android:letterSpacing="0.02"
-                android:backgroundTint="#D9DADA"
-                android:textColor="@android:color/black"
-                app:fontFamily="@font/roboto"/>
+            <Button
+                    android:text="Логин и пароль"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/button_select_login_password_entering"
+                    android:textAllCaps="false"
+                    app:cornerRadius="15dp"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.02"
+                    android:backgroundTint="#D9DADA"
+                    android:textColor="@android:color/black"
+                    app:fontFamily="@font/roboto"/>
+            <Button
+                    android:text="QR-код"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/button_select_qrcode_entering"
+                    android:textAllCaps="false"
+                    app:cornerRadius="15dp"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.02"
+                    android:backgroundTint="#D9DADA"
+                    android:textColor="@android:color/black"
+                    app:fontFamily="@font/roboto"/>
+
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

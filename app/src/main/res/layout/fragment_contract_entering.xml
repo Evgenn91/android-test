@@ -16,65 +16,80 @@
             android:layout_marginRight="57dp"
             android:clipChildren="false">
 
-        <TextView
-                android:text="Авторизация"
-                app:fontFamily="@font/roboto"
+        <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/authorization_title"
-                android:layout_marginBottom="10dp"
-                android:textSize="34sp"
-                android:letterSpacing="0.03"
-                android:textColor="@android:color/black"/>
-        <TextView
-                android:text="Введите номер договора"
-                app:fontFamily="@font/roboto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/authorization_subtitle"
-                android:textSize="16dp"
-                android:letterSpacing="0.02"
-                android:textColor="@android:color/black"/>
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:layout_marginBottom="40dp">
 
-
-        <com.google.android.material.textfield.TextInputLayout
-                app:fontFamily="@font/roboto"
-                android:id="@+id/enter_authorization_contract"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="10dp"
-                android:clipChildren="false"
-                app:boxBackgroundColor="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                app:boxBackgroundMode="outline"
-                app:boxStrokeWidth="0dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxCornerRadiusTopEnd="16dp"
-                app:boxCornerRadiusTopStart="16dp"
-                app:boxCornerRadiusBottomStart="16dp"
-                app:boxCornerRadiusBottomEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-            <com.google.android.material.textfield.TextInputEditText
-                    android:elevation="12dp"
+            <TextView
+                    android:text="Авторизация"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="XXXXXX-XXX" />
-        </com.google.android.material.textfield.TextInputLayout>
+                    android:id="@+id/authorization_title_main"
+                    android:textSize="34sp"
+                    android:letterSpacing="0.03"
+                    android:textColor="@android:color/black"
+                    app:fontFamily="@font/roboto"/>
+            <TextView
+                    android:text="Введите номер договора"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/authorization_subtitle_main"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.02"
+                    android:textColor="@android:color/black"
+                    app:fontFamily="@font/roboto"/>
+        </LinearLayout>
 
-        <Button
-                android:text="Продолжить"
+        <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/button_authorization_contract"
-                android:textAllCaps="false"
-                app:cornerRadius="15dp"
-                android:textSize="16sp"
-                android:letterSpacing="0.02"
-                app:fontFamily="@font/roboto"/>
+                android:layout_height="1dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:clipChildren="false">
 
+            <com.google.android.material.textfield.TextInputLayout
+                    app:fontFamily="@font/roboto"
+                    android:id="@+id/enter_authorization_contract"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clipChildren="false"
+                    app:boxBackgroundColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeWidth="0dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textfield.TextInputEditText
+                        android:elevation="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="XXXXXX-XXX"
+                        android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <Button
+                    android:text="Продолжить"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/button_authorization_contract"
+                    android:textAllCaps="false"
+                    app:cornerRadius="15dp"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.02"
+                    app:fontFamily="@font/roboto"/>
+
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
