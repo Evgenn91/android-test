@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import dsk.altlombard.test.R;
+import dsk.altlombard.test.dto.Address;
 import dsk.altlombard.test.dto.PledgeRow;
 
 import java.util.List;
@@ -14,17 +15,17 @@ import java.util.List;
 public class AnotherAddressRowAdapter extends BaseAdapter {
 
     private Context context;
-    private List<PledgeRow> pledges;
+    private List<Address> addresses;
 
     private LayoutInflater inflter;
 
     private int count = 0;
 
-    public AnotherAddressRowAdapter(Context context, List<PledgeRow> pledges) {
+    public AnotherAddressRowAdapter(Context context, List<Address> addresses) {
         this.context = context;
-        this.pledges = pledges;
+        this.addresses = addresses;
         this.inflter = (LayoutInflater.from(context));
-        this.count = pledges.size();
+        this.count = addresses.size();
     }
 
     @Override
@@ -48,8 +49,8 @@ public class AnotherAddressRowAdapter extends BaseAdapter {
 
         TextView numberDatePledge = (TextView) view.findViewById(R.id.number_date_pledge);
         TextView numberDatePledge1 = (TextView) view.findViewById(R.id.number_date_pledge1);
-        numberDatePledge.setText(pledges.get(position).getNumber());
-        numberDatePledge1.setText(pledges.get(position).getNumber());
+        numberDatePledge.setText(addresses.get(position).getStreet());
+        numberDatePledge1.setText(addresses.get(position).getTimeWorking());
 
         return view;
     }

@@ -46,8 +46,16 @@ public class FullPledgeRowAdapter extends BaseAdapter {
     public View getView(int position, View view, ViewGroup parent) {
         view = inflter.inflate(R.layout.fragment_pledge_working_listview, null);
 
-        TextView numberDatePledge = (TextView) view.findViewById(R.id.number_full_date_pledge);
-        numberDatePledge.setText(pledges.get(position).getNumber()+" от " + pledges.get(position).getNumber());
+        TextView numberDatePledge = view.findViewById(R.id.number_date_pledge);
+        TextView numberDatePledge1 = view.findViewById(R.id.number_date_pledge1);
+        TextView numberDatePledge2 = view.findViewById(R.id.number_date_pledge2);
+        TextView numberDatePledge3 = view.findViewById(R.id.number_date_pledge3);
+        TextView numberDatePledge4 = view.findViewById(R.id.number_date_pledge4);
+        numberDatePledge.setText(pledges.get(position).getNumber()+" от " + pledges.get(position).getDate());
+        numberDatePledge1.setText(pledges.get(position).getPayment());
+        numberDatePledge2.setText(pledges.get(position).getRemains());
+        numberDatePledge3.setText(pledges.get(position).getPerent());
+        numberDatePledge4.setText(pledges.get(position).getRate());
 
         return view;
     }

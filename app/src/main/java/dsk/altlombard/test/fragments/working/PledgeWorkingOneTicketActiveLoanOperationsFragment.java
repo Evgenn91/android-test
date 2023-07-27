@@ -10,10 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import dsk.altlombard.test.R;
-import dsk.altlombard.test.adapter.PledgeActiveOneRowAdapter;
-import dsk.altlombard.test.databinding.FragmentContractEnteringBinding;
+import dsk.altlombard.test.adapter.OperationRowAdapter;
 import dsk.altlombard.test.databinding.FragmentPledgeWorkingActiveOneLoanOperationsBinding;
+import dsk.altlombard.test.dto.OperationRow;
 import dsk.altlombard.test.dto.PledgeRow;
+import dsk.altlombard.test.dto.ProductRow;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,28 +37,27 @@ public class PledgeWorkingOneTicketActiveLoanOperationsFragment extends Fragment
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setTitle("");
 
         //TODO реализация получения списка залогов
-        List<PledgeRow> pledges = new ArrayList<>();
-        pledges.add(new PledgeRow("111111-111", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-113", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-114", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-115", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-116", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-117", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-118", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-111", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-113", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-114", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-115", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-116", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-117", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-118", "10.10.2020","100.00","1000.00"));
+        List<ProductRow> products = new ArrayList<>();
+        products.add(new ProductRow("Браслет б/к ","9800,00р","1004,60р"));
+        products.add(new ProductRow("Кольцо с/к","1560,00р","0,00р"));
+        products.add(new ProductRow("Браслет б/к ","9800,00р","1004,60р"));
+        products.add(new ProductRow("Кольцо с/к","1560,00р","0,00р"));
+        products.add(new ProductRow("Браслет б/к ","9800,00р","1004,60р"));
+        products.add(new ProductRow("Кольцо с/к","1560,00р","0,00р"));
+        products.add(new ProductRow("Браслет б/к ","9800,00р","1004,60р"));
+        products.add(new ProductRow("Кольцо с/к","1560,00р","0,00р"));
+        products.add(new ProductRow("Браслет б/к ","9800,00р","1004,60р"));
+        products.add(new ProductRow("Кольцо с/к","1560,00р","0,00р"));
+        products.add(new ProductRow("Браслет б/к ","9800,00р","1004,60р"));
+        products.add(new ProductRow("Кольцо с/к","1560,00р","0,00р"));
+        products.add(new ProductRow("Браслет б/к ","9800,00р","1004,60р"));
+        products.add(new ProductRow("Кольцо с/к","1560,00р","0,00р"));
 
         ListView simpleListView = view.findViewById(R.id.pledge_active_loan_operations);
-        PledgeActiveOneRowAdapter customAdapter = new PledgeActiveOneRowAdapter(view.getContext(), pledges);
+        OperationRowAdapter customAdapter = new OperationRowAdapter(view.getContext(), products, "f");
         simpleListView.setAdapter(customAdapter);
     }
 

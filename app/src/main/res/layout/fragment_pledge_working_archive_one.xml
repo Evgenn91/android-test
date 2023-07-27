@@ -26,21 +26,25 @@
 
                 <LinearLayout
                         android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
 
                     <TextView
-                            android:text="Все операции"
+                            android:text="Залоговый билет"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/pincode_subtitle1"
-                            android:textColor="@android:color/black"/>
+                            android:id="@+id/pincode_subtitle111"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp"
+                            android:layout_marginTop="5dp"/>
+
                     <TextView
-                            android:text="Все операции"
+                            android:text="№ 101021-456"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/pincode_subtitle2"
-                            android:textColor="@android:color/black"/>
+                            android:id="@+id/pincode_subtitle122"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"/>
 
                 </LinearLayout>
 
@@ -56,8 +60,8 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
                 android:clipChildren="false">
 
 
@@ -99,7 +103,7 @@
                             android:layout_marginTop="5dp"/>
 
                     <TextView
-                            android:text="11012,40 р"
+                            android:text="11012,40р"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/pincode_subtitle4"
@@ -141,7 +145,7 @@
                             android:layout_marginTop="5dp"/>
 
                     <TextView
-                            android:text="11000,13 р"
+                            android:text="11000,13р"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/pincode_subtitle7"
@@ -191,7 +195,7 @@
                                 android:gravity="center"/>
 
                         <TextView
-                                android:text="11012,40 р"
+                                android:text="11012,40р"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/pincode_subtitle17"
@@ -268,7 +272,7 @@
                                 android:gravity="center"/>
 
                         <TextView
-                                android:text="11 995,40 ₽"
+                                android:text="11 995,40р"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/pincode_subtitle23"
@@ -292,7 +296,7 @@
                                 android:gravity="center"/>
 
                         <TextView
-                                android:text="23,99 ₽"
+                                android:text="23,99р"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/pincode_subtitle25"
@@ -345,7 +349,7 @@
                                 android:gravity="center"/>
 
                         <TextView
-                                android:text="71,97 ₽"
+                                android:text="71,97р"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/pincode_subtitle29"
@@ -405,7 +409,7 @@
                                 android:gravity="center"/>
 
                         <TextView
-                                android:text="12 067,37 ₽"
+                                android:text="12 067,37р"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/pincode_subtitle33"

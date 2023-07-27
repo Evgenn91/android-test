@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import dsk.altlombard.test.R;
+import dsk.altlombard.test.dto.MessageRow;
 import dsk.altlombard.test.dto.PledgeRow;
 
 import java.util.List;
@@ -14,17 +15,17 @@ import java.util.List;
 public class NoticeRowAdapter extends BaseAdapter {
 
     private Context context;
-    private List<PledgeRow> pledges;
+    private List<MessageRow> messages;
 
     private LayoutInflater inflter;
 
     private int count = 0;
 
-    public NoticeRowAdapter(Context context, List<PledgeRow> pledges) {
+    public NoticeRowAdapter(Context context, List<MessageRow> messages) {
         this.context = context;
-        this.pledges = pledges;
+        this.messages = messages;
         this.inflter = (LayoutInflater.from(context));
-        this.count = pledges.size();
+        this.count = messages.size();
     }
 
 
@@ -50,9 +51,9 @@ public class NoticeRowAdapter extends BaseAdapter {
         TextView numberDatePledge = (TextView) view.findViewById(R.id.number_full_date_pledge);
         TextView numberDatePledge1 = (TextView) view.findViewById(R.id.number_full_date_pledge1);
         TextView numberDatePledge2 = (TextView) view.findViewById(R.id.number_full_date_pledge2);
-        numberDatePledge.setText(pledges.get(position).getNumber());
-        numberDatePledge1.setText(pledges.get(position).getPayment());
-        numberDatePledge2.setText(pledges.get(position).getRemains());
+        numberDatePledge.setText(messages.get(position).getNumber());
+        numberDatePledge1.setText(messages.get(position).getDate());
+        numberDatePledge2.setText(messages.get(position).getMessage());
 
         return view;
     }

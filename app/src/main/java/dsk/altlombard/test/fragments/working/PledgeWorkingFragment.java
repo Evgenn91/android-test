@@ -35,6 +35,8 @@ public class PledgeWorkingFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+//        binding.topAppBar.
+
         if(isActive){
             getChildFragmentManager()
                     .beginTransaction()
@@ -75,7 +77,6 @@ public class PledgeWorkingFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {

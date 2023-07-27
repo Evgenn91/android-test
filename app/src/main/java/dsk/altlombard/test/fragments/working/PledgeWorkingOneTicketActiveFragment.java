@@ -31,12 +31,15 @@ public class PledgeWorkingOneTicketActiveFragment extends Fragment {
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setTitle("");
 
         binding.layoutPledgeWorkAllOperations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //TODO передача инф о текущем объекте
-                NavHostFragment.findNavController(PledgeWorkingOneTicketActiveFragment.this).navigate(R.id.action_pledgeWorkingOneTicketActiveFragment_to_pledgeWorkingOneTicketActiveOperationsFragment);
+                Bundle dates = new Bundle();
+                dates.putBoolean("res", false);
+                NavHostFragment.findNavController(PledgeWorkingOneTicketActiveFragment.this).navigate(R.id.action_pledgeWorkingOneTicketActiveFragment_to_pledgeWorkingOneTicketActiveOperationsFragment, dates);
             }
         });
 

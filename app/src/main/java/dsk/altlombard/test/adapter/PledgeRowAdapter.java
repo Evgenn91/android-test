@@ -48,8 +48,7 @@ public class PledgeRowAdapter extends BaseAdapter {
         view = inflter.inflate(R.layout.fragment_main_working_listview, null);
 
         TextView numberDatePledge = (TextView) view.findViewById(R.id.number_date_pledge);
-        numberDatePledge.setText(pledges.get(position).getNumber()+" от " + pledges.get(position).getNumber());
-
+        numberDatePledge.setText(pledges.get(position).getNumber()+" от " + pledges.get(position).getDate());
         return view;
     }
 }

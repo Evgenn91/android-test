@@ -29,13 +29,16 @@ public class PledgeWorkingOneTicketArchiveFragment extends Fragment {
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setTitle("");
 
         //CoDe
         binding.layoutPledgeWorkAllOperations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //TODO передача инф о текущем объекте
-                NavHostFragment.findNavController(PledgeWorkingOneTicketArchiveFragment.this).navigate(R.id.action_pledgeWorkingOneTicketArchiveFragment_to_pledgeWorkingOneTicketActiveOperationsFragment);
+                Bundle dates = new Bundle();
+                dates.putBoolean("res", false);
+                NavHostFragment.findNavController(PledgeWorkingOneTicketArchiveFragment.this).navigate(R.id.action_pledgeWorkingOneTicketArchiveFragment_to_pledgeWorkingOneTicketActiveOperationsFragment, dates);
             }
         });
 

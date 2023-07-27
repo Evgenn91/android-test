@@ -27,7 +27,8 @@
                     android:layout_weight = "1"
                     android:text="--"
                     android:textSize="16sp"
-                    android:padding="5dp"/>
+                    android:padding="5dp"
+                    android:textColor="@android:color/black"/>
 
             <TextView
                     android:id="@+id/number_full_date_pledge1"
@@ -46,7 +47,8 @@
                 android:layout_height="wrap_content"
                 android:text="--"
                 android:textSize="16sp"
-                android:padding="21dp"/>
+                android:padding="21dp"
+                android:textColor="@android:color/black"/>
 
 
     </LinearLayout>

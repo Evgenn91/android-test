@@ -12,21 +12,23 @@ public class PledgeRow implements Serializable {
     private String number;
     private String date;
 
-    //оплата
+    //оплата по договору
     private String payment;
-    //остаток
+    //остаток по займу
     private String remains;
+    private String perent;
+    //ставка в день
+    private String rate;
 
 
 
-    public PledgeRow() {
-    }
-
-    public PledgeRow(String number, String date, String payment, String remains) {
+    public PledgeRow(String number, String date, String payment, String remains, String perent, String rate) {
         this.number = number;
         this.date = date;
         this.payment = payment;
         this.remains = remains;
+        this.perent = perent;
+        this.rate = rate;
     }
 
     public String getNumber() {
@@ -61,13 +63,19 @@ public class PledgeRow implements Serializable {
         this.remains = remains;
     }
 
-    @Override
-    public String toString() {
-        return "PledgeRow{" +
-                "number='" + number + '\'' +
-                ", date='" + date + '\'' +
-                ", payment='" + payment + '\'' +
-                ", remains='" + remains + '\'' +
-                '}';
+    public String getPerent() {
+        return perent;
+    }
+
+    public void setPerent(String perent) {
+        this.perent = perent;
+    }
+
+    public String getRate() {
+        return rate;
+    }
+
+    public void setRate(String rate) {
+        this.rate = rate;
     }
 }

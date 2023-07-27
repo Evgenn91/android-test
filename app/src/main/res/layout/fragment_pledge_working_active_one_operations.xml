@@ -22,8 +22,15 @@
                     android:background="@android:color/white"
                     android:id="@+id/topAppBar"
                     android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:title="Залоговый билет"/>
+                    android:layout_height="?attr/actionBarSize">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_working">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -33,8 +40,8 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
                 android:clipChildren="false">
 
             <LinearLayout
@@ -57,7 +64,7 @@
                         android:textColor="@android:color/black"/>
 
                 <TextView
-                        android:text="3 396,60 ₽"
+                        android:text="3 396,60р"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/pincode_subtitle2"
@@ -86,7 +93,7 @@
                                 android:layout_marginTop="5dp"/>
 
                         <TextView
-                                android:text="1004,60 ₽"
+                                android:text="1004,60р"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/pincode_subtitle14"
@@ -112,7 +119,7 @@
                                 android:layout_marginTop="5dp"/>
 
                         <TextView
-                                android:text="2 392,00 ₽"
+                                android:text="2 392,00р"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/pincode_subtitle4"
@@ -132,7 +139,7 @@
                     android:textSize="24sp"
                     android:gravity="center"
                     android:textColor="@android:color/black"
-                    android:layout_marginTop="30dp"/>
+                    android:layout_marginTop="10dp"/>
 
             <LinearLayout
                     android:orientation="horizontal"

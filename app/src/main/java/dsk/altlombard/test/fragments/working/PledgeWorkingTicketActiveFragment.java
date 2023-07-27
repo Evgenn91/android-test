@@ -33,14 +33,17 @@ public class PledgeWorkingTicketActiveFragment extends Fragment {
 
         //TODO реализация получения списка залогов(возможно передается при смене фрагмента)
         List<PledgeRow> pledges = new ArrayList<>();
-        pledges.add(new PledgeRow("111111-111", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-113", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-114", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-115", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-116", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-117", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-118", "10.10.2020","100.00","1000.00"));
+        pledges.add(new PledgeRow("111111-111", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-112", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-113", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-114", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-115", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-116", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-117", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-118", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-116", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-117", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
+        pledges.add(new PledgeRow("111111-118", "10.03.2023","71,97р","11995,40р","0,20%","23,99р"));
 
         ListView simpleListView = view.findViewById(R.id.full_active_pledge_list);
         FullPledgeRowAdapter customAdapter = new FullPledgeRowAdapter(view.getContext(), pledges);

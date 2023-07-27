@@ -35,8 +35,8 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
                 android:clipChildren="false">
 
             <LinearLayout
@@ -45,7 +45,10 @@
                     android:layout_height="120dp"
                     android:background="@drawable/rectangl"
                     android:elevation="12dp"
-                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
                     android:gravity="center">
 
                 <TextView
@@ -76,17 +79,18 @@
                     android:layout_marginTop="10dp">
 
                 <LinearLayout
+                        android:id="@+id/layout_pledge_all"
                         android:orientation="vertical"
                         android:layout_width="0dip"
                         android:layout_height="100dp"
                         android:layout_weight="1"
                         android:background="@drawable/rectangl"
                         android:elevation="12dp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:gravity="center">
 
                     <TextView
-                            android:text="Общий остаток по займу"
+                            android:text="Общая сумма погашений"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/pincode_subtitle3"
@@ -96,7 +100,7 @@
                             app:fontFamily="@font/roboto_light"/>
 
                     <TextView
-                            android:text="11000 р"
+                            android:text="32995,00 р"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/pincode_subtitle4"
@@ -113,7 +117,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/rectangl"
                         android:elevation="12dp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
                         android:gravity="center">
 
                     <TextView
@@ -127,7 +131,7 @@
                             app:fontFamily="@font/roboto_light"/>
 
                     <TextView
-                            android:text="14000 р"
+                            android:text="11995,00 р"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/pincode_subtitle6"
@@ -156,6 +160,7 @@
                       android:layout_height="wrap_content"
                       tools:ignore="MissingConstraints"
                       android:layout_marginTop="10dp"
+                      android:layout_marginBottom="10dp"
                       android:dividerHeight="15.0sp"
                       android:divider="@android:color/transparent"
                       android:scrollbars="none"/>

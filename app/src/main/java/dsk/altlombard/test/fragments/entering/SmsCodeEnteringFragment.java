@@ -68,7 +68,7 @@ public class SmsCodeEnteringFragment extends Fragment {
     private void startCounterDown(TextView textWithCounter, ViewGroup viewGroup, SharedPreferences registrationEntity){
         SharedPreferences.Editor myEdit = registrationEntity.edit();
 
-        new CountDownTimer(5000, 1000) {
+        new CountDownTimer(10000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 String sec = "Запросить новый код можно через " + millisUntilFinished / 1000 + " сек.";
@@ -84,6 +84,7 @@ public class SmsCodeEnteringFragment extends Fragment {
                     deleteButton.setLayoutParams(params);
                     deleteButton.setText("Отправить");
                     deleteButton.setTextColor(Color.RED);
+                    deleteButton.setTextSize(16);
                     deleteButton.setPadding(20,20,20,20);
                     viewGroup.addView(deleteButton);
                     deleteButton.setOnClickListener(new View.OnClickListener() {

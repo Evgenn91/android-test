@@ -22,9 +22,33 @@
                     android:background="@android:color/white"
                     android:id="@+id/topAppBar"
                     android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:title="Залоговый билет"
-            />
+                    android:layout_height="?attr/actionBarSize">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:text="Залоговый билет"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pincode_subtitle111"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp"
+                            android:layout_marginTop="5dp"/>
+
+                    <TextView
+                            android:text="№ 101021-456"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/pincode_subtitle122"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"/>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.appbar.MaterialToolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -34,8 +58,8 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
                 android:clipChildren="false">
 
             <LinearLayout
@@ -58,7 +82,7 @@
                         android:textColor="@android:color/black"/>
 
                 <TextView
-                        android:text="12 067,37 ₽"
+                        android:text="12 067,37р"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/pincode_subtitle2"
@@ -87,7 +111,7 @@
                                 android:layout_marginTop="5dp"/>
 
                         <TextView
-                                android:text="11 995,00 ₽"
+                                android:text="11 995,00р"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/pincode_subtitle14"
@@ -113,7 +137,7 @@
                                 android:layout_marginTop="5dp"/>
 
                         <TextView
-                                android:text="71,97 ₽"
+                                android:text="71,97р"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/pincode_subtitle4"
@@ -133,7 +157,7 @@
                     android:textSize="24sp"
                     android:gravity="center"
                     android:textColor="@android:color/black"
-                    android:layout_marginTop="30dp"/>
+                    android:layout_marginTop="10dp"/>
 
             <LinearLayout
                     android:orientation="horizontal"
@@ -182,6 +206,7 @@
                       android:layout_height="wrap_content"
                       tools:ignore="MissingConstraints"
                       android:layout_margin="10dp"
+                      android:layout_marginBottom="10dp"
                       android:dividerHeight="10.0sp"
                       android:divider="@android:color/transparent"
                       android:scrollbars="none">

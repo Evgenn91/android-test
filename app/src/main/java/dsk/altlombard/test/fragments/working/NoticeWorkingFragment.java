@@ -15,6 +15,7 @@ import dsk.altlombard.test.adapter.NoticeRowAdapter;
 import dsk.altlombard.test.adapter.PledgeRowAdapter;
 import dsk.altlombard.test.databinding.FragmentMainWorkingBinding;
 import dsk.altlombard.test.databinding.FragmentNoticeWorkingBinding;
+import dsk.altlombard.test.dto.MessageRow;
 import dsk.altlombard.test.dto.PledgeRow;
 
 import java.util.ArrayList;
@@ -35,14 +36,16 @@ public class NoticeWorkingFragment extends Fragment {
 
         //MY CODE HERE
         //TODO реализация получения списка залогов
-        List<PledgeRow> pledges = new ArrayList<>();
-        pledges.add(new PledgeRow("111111-111", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-113", "10.10.2020","100.00","1000.00"));
-        pledges.add(new PledgeRow("111111-114", "10.10.2020","100.00","1000.00"));
+        List<MessageRow> messages = new ArrayList<>();
+        messages.add(new MessageRow("№101021-456", "23.05.23 14:45","Лишь элементы политического процесса лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе."));
+        messages.add(new MessageRow("№101021-456", "23.05.23 14:45","Лишь элементы политического процесса лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе."));
+        messages.add(new MessageRow("№101021-456", "23.05.23 14:45","Лишь элементы политического процесса лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе."));
+        messages.add(new MessageRow("№101021-456", "23.05.23 14:45","Лишь элементы политического процесса лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе."));
+        messages.add(new MessageRow("№101021-456", "23.05.23 14:45","Лишь элементы политического процесса лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе."));
+        messages.add(new MessageRow("№101021-456", "23.05.23 14:45","Лишь элементы политического процесса лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе."));
 
         ListView simpleListView = view.findViewById(R.id.notice_list);
-        NoticeRowAdapter customAdapter = new NoticeRowAdapter(view.getContext(), pledges);
+        NoticeRowAdapter customAdapter = new NoticeRowAdapter(view.getContext(), messages);
         simpleListView.setAdapter(customAdapter);
 
     }

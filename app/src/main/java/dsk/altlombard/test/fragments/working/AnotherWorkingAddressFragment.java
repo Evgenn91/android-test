@@ -19,6 +19,7 @@ import dsk.altlombard.test.adapter.AnotherAddressRowAdapter;
 import dsk.altlombard.test.adapter.PledgeRowAdapter;
 import dsk.altlombard.test.databinding.FragmentAnotherWorkingAddressBinding;
 import dsk.altlombard.test.databinding.FragmentAnotherWorkingBinding;
+import dsk.altlombard.test.dto.Address;
 import dsk.altlombard.test.dto.PledgeRow;
 
 import java.util.ArrayList;
@@ -45,10 +46,10 @@ public class AnotherWorkingAddressFragment extends Fragment {
 
         //MY CODE HERE
 //        //TODO реализация получения списка залогов
-        List<PledgeRow> pledges = new ArrayList<>();
+        List<Address> addresses = new ArrayList<>();
         ListView simpleListView = view.findViewById(R.id.main_active_pledge_list1);
 
-        String[] spinnerList = new String[]{"1","2","3","4","5","6","7"};
+        String[] spinnerList = new String[]{"Екатеринбург","Нижний Тагил","Ревда","Челябинск","Пермь"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, spinnerList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -57,26 +58,35 @@ public class AnotherWorkingAddressFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String item = (String) parent.getItemAtPosition(position);
-                if(item.equals("1")){
-                    pledges.clear();
-                    pledges.add(new PledgeRow("111111-111", "10.10.2020","100.00","1000.00"));
-                } else if(item.equals("2")){
-                    pledges.clear();
-                    pledges.add(new PledgeRow("111111-111", "10.10.2020","100.00","1000.00"));
-                    pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
-                } else if(item.equals("3")){
-                    pledges.clear();
-                    pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
-                    pledges.add(new PledgeRow("111111-111", "10.10.2020","100.00","1000.00"));
-                    pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
+                if(item.equals("Екатеринбург")){
+                    addresses.clear();
+                    addresses.add(new Address("Екатеринбург", "Проспек Ленина, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Екатеринбург", "Победы, 11","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Екатеринбург", "8 Марта, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                } else if(item.equals("Нижний Тагил")){
+                    addresses.clear();
+                    addresses.add(new Address("Нижний Тагил", "Бакинских коммисаров, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Нижний Тагил", "Санаторная, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                } else if(item.equals("Ревда")){
+                    addresses.clear();
+                    addresses.add(new Address("Ревда", "Розы Люксенбург, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Ревда", "Восточная, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Ревда", "Восточная, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                } else if(item.equals("Челябинск")){
+                    addresses.clear();
+                    addresses.add(new Address("Челябинск", "Проспект Космонавтов, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Челябинск", "Лучистая, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                } else if(item.equals("Пермь")){
+                    addresses.clear();
+                    addresses.add(new Address("Пермь", "Ломоносова, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Пермь", "Московская, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Пермь", "Московская, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Пермь", "Московская, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
+                    addresses.add(new Address("Пермь", "Московская, 36","Ежедневно с 10:00 до 20:00\n" + "Обед c 14:00 до 14:30"));
                 } else {
-                    pledges.clear();
-                    pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
-                    pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
-                    pledges.add(new PledgeRow("111111-111", "10.10.2020","100.00","1000.00"));
-                    pledges.add(new PledgeRow("111111-112", "10.10.2020","100.00","1000.00"));
+                    addresses.clear();
                 }
-                AnotherAddressRowAdapter customAdapter = new AnotherAddressRowAdapter(view.getContext(), pledges);
+                AnotherAddressRowAdapter customAdapter = new AnotherAddressRowAdapter(view.getContext(), addresses);
                 simpleListView.setAdapter(customAdapter);
             }
 

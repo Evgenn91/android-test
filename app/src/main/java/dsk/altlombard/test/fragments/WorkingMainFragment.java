@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -29,6 +30,10 @@ public class WorkingMainFragment extends Fragment{
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        //удаление картинки заднего фона
+        ImageView backgroundImage = getActivity().findViewById(R.id.include11);
+        backgroundImage.setImageDrawable(null);
 
         if(isFirstTime){
             getChildFragmentManager()

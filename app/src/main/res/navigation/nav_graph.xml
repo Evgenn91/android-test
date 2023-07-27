@@ -52,6 +52,8 @@
                 app:destination="@id/noticeWorkingAddressFragment"/>
         <action android:id="@+id/action_workingMainFragment_to_noticeWorkingAboutFragment"
                 app:destination="@id/noticeWorkingAboutFragment"/>
+        <action android:id="@+id/action_workingMainFragment_to_pledgeWorkingOneTicketActiveOperationsFragment"
+                app:destination="@id/pledgeWorkingOneTicketActiveOperationsFragment"/>
     </fragment>
     <fragment android:id="@+id/pledgeWorkingOneTicketActiveFragment"
               android:name="dsk.altlombard.test.fragments.working.PledgeWorkingOneTicketActiveFragment"
