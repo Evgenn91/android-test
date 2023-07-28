@@ -4,12 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.*;
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +17,10 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.google.android.material.textfield.TextInputLayout;
 import dsk.altlombard.test.R;
 import dsk.altlombard.test.databinding.FragmentCodeEnteringBinding;
+import dsk.altlombard.test.fragments.TestFragment;
 import dsk.altlombard.test.fragments.WorkingMainFragment;
+
+import java.util.concurrent.Executor;
 
 public class CodeEnteringFragment extends Fragment {
 
@@ -85,6 +87,10 @@ public class CodeEnteringFragment extends Fragment {
 
     }
 
+    private Executor executor;
+    private BiometricPrompt biometricPrompt;
+    private BiometricPrompt.PromptInfo promptInfo;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,6 +107,53 @@ public class CodeEnteringFragment extends Fragment {
             }
         };
         requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
+
+
+
+
+        getActivity().setContentView(R.layout.fragment_code_entering);
+        executor = ContextCompat.getMainExecutor(getContext());
+        biometricPrompt = new BiometricPrompt(CodeEnteringFragment.this,
+                executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode,
+                                              @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+                Toast.makeText(getActivity().getApplicationContext(),
+                                "Authentication error: " + errString, Toast.LENGTH_SHORT)
+                        .show();
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(
+                    @NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                Toast.makeText(getActivity().getApplicationContext(),
+                        "Authentication succeeded!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+                Toast.makeText(getActivity().getApplicationContext(), "Authentication failed",
+                                Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
+
+        promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Biometric login for my app")
+                .setSubtitle("Log in using your biometric credential")
+                .setNegativeButtonText("Use account password")
+                .build();
+
+        // Prompt appears when user clicks "Log in".
+        // Consider integrating with the keystore to unlock cryptographic operations,
+        // if needed by your app.
+        Button biometricLoginButton = getActivity().findViewById(R.id.button_pincode_entering);
+        biometricLoginButton.setOnClickListener(view -> {
+            biometricPrompt.authenticate(promptInfo);
+        });
     }
 
     @Override
